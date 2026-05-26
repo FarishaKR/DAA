@@ -23,13 +23,13 @@ It also compares algorithm performance based on:
 
 ## Home Page
 
-![Home Page](image(15).png)
+![Home Page](img1.png)
 
 ---
 
 ## Search Result Page
 
-![Result Page](image(16).png)
+![Result Page](img2.png)
 
 ---
 
