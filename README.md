@@ -264,20 +264,6 @@ Assistant Professor
 Department of Computer Science and Engineering  
 Chennai Institute of Technology
 
----
-
-# 🤝 Contributions
-
-Contributions are welcome.
-
-You can:
-- Improve implementations
-- Add new algorithms
-- Optimize performance
-- Add visualization
-- Improve documentation
-
----
 
 # ⭐ Support
 
