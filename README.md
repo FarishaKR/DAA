@@ -1,276 +1,195 @@
-# 🔍 String Matching Algorithms in Python
+# Pattern Matching Algorithms in Python
 
-This repository contains Python implementations of different **String Matching Algorithms** used in **Design and Analysis of Algorithms (DAA)**.  
-
-The programs demonstrate how pattern searching works using:
-- Naive String Matching
-- Rabin-Karp Algorithm
-- Knuth-Morris-Pratt (KMP) Algorithm
-- Additional pattern matching implementations
-
-These algorithms are widely used in:
-- Text processing
-- Search engines
-- DNA sequence matching
-- Compiler design
-- Cybersecurity
-- Intrusion detection systems
+This repository contains implementations of various **String Pattern Matching Algorithms** using Python.  
+The programs are developed for understanding the working, efficiency, and performance comparison of different pattern searching techniques used in **Design and Analysis of Algorithms (DAA)**.
 
 ---
 
-# 📂 Repository Structure
+# Repository Structure
 
-```text
-.
+```bash
+📂 Pattern-Matching-Algorithms
+│
 ├── input1.txt
 ├── pattern.txt
+│
 ├── sample1.py
 ├── sample2.py
 ├── sample3.py
 ├── sample4.py
 ├── sample5.py
+│
 └── README.md
 ```
 
 ---
 
-# 📄 File Description
+# Programs Included
 
 | File Name | Description |
-|---|---|
-| `input1.txt` | Contains the input text |
-| `pattern.txt` | Contains the pattern to search |
-| `sample1.py` | Naive String Matching Algorithm |
-| `sample2.py` | Rabin-Karp Algorithm |
-| `sample3.py` | KMP Algorithm |
-| `sample4.py` | Additional string matching implementation |
-| `sample5.py` | Additional pattern searching program |
+|-----------|-------------|
+| sample1.py | Naive String Matching using User Input |
+| sample2.py | Naive String Matching using File Input |
+| sample3.py | Rabin-Karp Algorithm using User Input |
+| sample4.py | Rabin-Karp Algorithm using Large Text |
+| sample5.py | Knuth-Morris-Pratt (KMP) Algorithm |
 
 ---
 
-# 🧠 Algorithms Implemented
+# Algorithms Implemented
+
+## 1. Naive String Matching Algorithm
+
+The Naive Pattern Matching Algorithm compares the pattern with every possible position in the text until a match is found.
+
+### Time Complexity
+
+Worst Case:
+
+:contentReference[oaicite:0]{index=0}
+
+Average Case:
+
+:contentReference[oaicite:1]{index=1}
 
 ---
 
-## 1️⃣ Naive String Matching Algorithm
+## 2. Rabin-Karp Algorithm
 
-### 📌 Description
-The Naive String Matching algorithm checks for the pattern at every possible position in the text.
+The Rabin-Karp Algorithm uses hashing to search for patterns efficiently in a text.
 
-### ⚙️ Working
-- Compare pattern characters with text characters one by one
-- Shift pattern by one position after mismatch
+### Time Complexity
 
-### ✅ Advantages
-- Easy to implement
-- Good for small inputs
+Average Case:
 
-### ❌ Disadvantages
-- Inefficient for large text
+:contentReference[oaicite:2]{index=2}
 
-### ⏱ Time Complexity
+Worst Case:
 
-| Case | Complexity |
-|---|---|
-| Best Case | `O(n)` |
-| Worst Case | `O(nm)` |
-
-Where:
-- `n` = length of text
-- `m` = length of pattern
+:contentReference[oaicite:3]{index=3}
 
 ---
 
-## 2️⃣ Rabin-Karp Algorithm
+## 3. Knuth-Morris-Pratt (KMP) Algorithm
 
-### 📌 Description
-Rabin-Karp uses **hashing** to search patterns efficiently.
+The KMP Algorithm improves pattern searching efficiency using the LPS (Longest Prefix Suffix) array.
 
-### ⚙️ Working
-- Compute hash value for pattern
-- Compute hash value for text window
-- Compare hash values first
-- If hashes match, compare actual characters
+### Time Complexity
 
-### ✅ Advantages
-- Efficient for multiple pattern searching
-- Faster average performance
-
-### ❌ Disadvantages
-- Hash collisions may occur
-
-### ⏱ Time Complexity
-
-| Case | Complexity |
-|---|---|
-| Average Case | `O(n + m)` |
-| Worst Case | `O(nm)` |
+:contentReference[oaicite:4]{index=4}
 
 ---
 
-## 3️⃣ Knuth-Morris-Pratt (KMP) Algorithm
+# Features
 
-### 📌 Description
-KMP improves searching efficiency using an **LPS array** (Longest Prefix Suffix).
-
-### ⚙️ Working
-- Preprocess pattern
-- Avoid unnecessary comparisons
-- Reuse previous matching information
-
-### ✅ Advantages
-- Very efficient
-- No repeated comparisons
-
-### ❌ Disadvantages
-- Slightly complex implementation
-
-### ⏱ Time Complexity
-
-| Case | Complexity |
-|---|---|
-| Best Case | `O(n + m)` |
-| Average Case | `O(n + m)` |
-| Worst Case | `O(n + m)` |
+- Pattern Matching Techniques
+- File Handling in Python
+- User Input Based Searching
+- Large Text Pattern Searching
+- Execution Time Calculation
+- Performance Analysis of Algorithms
+- LPS Array Generation in KMP
+- Rolling Hash Technique in Rabin-Karp
 
 ---
 
-# 🛠 Technologies Used
+# Requirements
 
-- Python 3
-- File Handling
-- Time Module
-- String Processing
+- Python 3.x
 
 ---
 
-# ▶️ How to Run the Programs
+# How to Run
 
----
-
-## Step 1️⃣ Clone the Repository
+## Clone Repository
 
 ```bash
 git clone https://github.com/your-username/your-repository-name.git
 ```
 
----
-
-## Step 2️⃣ Navigate to the Folder
+## Open Repository Folder
 
 ```bash
 cd your-repository-name
 ```
 
----
-
-## Step 3️⃣ Run Python Programs
-
-Example:
+## Run Any Program
 
 ```bash
 python sample1.py
 ```
 
-or
+Example:
 
 ```bash
-python3 sample1.py
+python sample5.py
 ```
 
 ---
 
-# 📄 Input Files
+# Sample Inputs
 
----
-
-## input1.txt
-
-Contains the input text.
-
-### Example
+## Sample Input for User-Based Programs
 
 ```text
-hello world
+Enter Text: hello world
+Enter Pattern: world
 ```
 
 ---
 
-## pattern.txt
+# Output
 
-Contains the pattern to search.
-
-### Example
-
-```text
-world
-```
+The programs display:
+- Pattern matching index
+- Text length
+- Pattern length
+- Execution time
 
 ---
 
-# 📌 Sample Output
+# Concepts Covered
 
-```text
-Found pattern at index 6
-Length of Text: 11
-Length of Pattern: 5
-Execution Time: 0.0001
-```
+- String Matching
+- Pattern Searching
+- Hashing
+- Rolling Hash Function
+- LPS Array
+- Time Complexity Analysis
+- File Handling
+- Algorithm Comparison
 
 ---
 
-# 📊 Comparison of Algorithms
+# Algorithm Comparison
 
 | Algorithm | Best Case | Average Case | Worst Case |
-|---|---|---|---|
-| Naive | `O(n)` | `O(nm)` | `O(nm)` |
-| Rabin-Karp | `O(n+m)` | `O(n+m)` | `O(nm)` |
-| KMP | `O(n+m)` | `O(n+m)` | `O(n+m)` |
+|-----------|-----------|--------------|-------------|
+| Naive String Matching | O(n) | O((n-m+1)m) | O(nm) |
+| Rabin-Karp | O(n+m) | O(n+m) | O(nm) |
+| KMP | O(n+m) | O(n+m) | O(n+m) |
 
 ---
 
-# 🎯 Learning Objectives
+# Applications
 
-This project helps in understanding:
-
-- Pattern Matching Techniques
-- String Searching Algorithms
-- Hashing Concepts
-- LPS Array Construction
-- Time Complexity Analysis
-- Efficient Searching Methods
-
----
-
-# 📚 Applications
-
-These algorithms are used in:
-
-- Search Engines
 - Text Editors
-- Cybersecurity
-- DNA Pattern Matching
-- Data Mining
-- Compiler Design
-- Network Security
+- Search Engines
+- DNA Sequence Matching
+- Plagiarism Detection
+- Data Retrieval Systems
+- Information Search Systems
 
 ---
 
-# 👩‍💻 Author
+# Author
 
-## Farisha KR
-
-Assistant Professor  
-Department of Computer Science and Engineering  
-Chennai Institute of Technology
-
-
-# ⭐ Support
-
-If you found this repository useful, please consider giving it a ⭐ on GitHub.
+**Farisha KR**  
+M.Tech — Network and Information Security  
+Assistant Professor — Department of Computer Science and Engineering
 
 ---
 
-# 📜 License
+# License
 
-This project is created for educational and learning purposes.
+This project is developed for educational and academic purposes.
