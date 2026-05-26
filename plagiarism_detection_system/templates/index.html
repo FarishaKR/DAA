@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Plagiarism Detection System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Intelligent Pattern Searching System</h1>
+
+    <form action="/search" method="POST" enctype="multipart/form-data">
+
+        <label>Upload Document</label>
+        <input type="file" name="file" required>
+
+        <label>Enter Pattern</label>
+        <input type="text" name="pattern" required>
+
+        <label>Select Algorithm</label>
+
+        <select name="algorithm">
+            <option>Naive</option>
+            <option>KMP</option>
+            <option>Rabin-Karp</option>
+            <option>Boyer-Moore</option>
+        </select>
+
+        <button type="submit">Search Pattern</button>
+
+    </form>
+
+</div>
+
+</body>
+</html>

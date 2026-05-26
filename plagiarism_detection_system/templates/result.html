@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Search Result</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Search Results</h1>
+
+        <!-- Algorithm -->
+        <div class="card">
+            <h2>Algorithm Used</h2>
+            <p>{{ algorithm }}</p>
+        </div>
+
+        <!-- Total Matches -->
+        <div class="card">
+            <h2>Total Matches</h2>
+            <p>{{ total_matches }}</p>
+        </div>
+
+        <!-- Execution Time -->
+        <div class="card">
+            <h2>Execution Time</h2>
+            <p>{{ execution_time }} seconds</p>
+        </div>
+
+        <!-- Similarity -->
+        <div class="card">
+            <h2>Similarity</h2>
+            <p>{{ similarity }}%</p>
+        </div>
+
+        <!-- Match Positions -->
+        <div class="card">
+            <h2>Match Positions</h2>
+            <p>{{ positions }}</p>
+        </div>
+
+        <!-- Highlighted Text -->
+        <div class="card">
+            <h2>Highlighted Text</h2>
+
+            <div class="text-box">
+                {{ highlighted_text|safe }}
+            </div>
+        </div>
+
+        <!-- Graph -->
+        <div class="card">
+            <h2>Performance Graph</h2>
+
+            <canvas id="myChart"></canvas>
+        </div>
+
+    </div>
+
+    <!-- Chart Script -->
+    <script>
+
+        const ctx = document.getElementById('myChart');
+
+        new Chart(ctx, {
+            type: 'bar',
+
+            data: {
+                labels: ['Execution Time'],
+
+                datasets: [{
+                    label: 'Seconds',
+                    data: [{{ execution_time|default(0) }}],
+                    backgroundColor: ['#007bff'],
+                    borderColor: ['#0056b3'],
+                    borderWidth: 1
+                }]
+            },
+
+            options: {
+                responsive: true,
+
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+    </script>
+
+</body>
+
+</html>
