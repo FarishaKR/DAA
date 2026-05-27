@@ -1,15 +1,9 @@
-# Intelligent Pattern Searching System for Plagiarism Detection
+
 
 # Intelligent Pattern Searching System for Plagiarism Detection
 
 [![Live Demo](https://img.shields.io/badge/Live-Demo-green?style=for-the-badge)](https://plagiarism-detection-system-b2y8f17mn.vercel.app)
 [![GitHub](https://img.shields.io/badge/GitHub-Repository-black?style=for-the-badge&logo=github)](https://github.com/FarishaKR/DAA)
-
-## Live Demo
-
-🔗 https://plagiarism-detection-system-b2y8f17mn.vercel.app
-
----
 
 An advanced plagiarism detection and pattern searching web application developed using **Python Flask**, implementing classical **String Matching Algorithms** for academic document analysis.
 
