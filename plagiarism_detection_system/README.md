@@ -1,5 +1,11 @@
 # Intelligent Pattern Searching System for Plagiarism Detection
 
+## Live Demo
+
+🔗 https://plagiarism-detection-system-b2y8f17mn.vercel.app
+
+---
+
 An advanced plagiarism detection and pattern searching web application developed using **Python Flask**, implementing classical **String Matching Algorithms** for academic document analysis.
 
 The system efficiently detects:
